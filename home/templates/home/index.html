@@ -1,19 +1,54 @@
 {% extends "home/layout.html" %}
 
+{% block extra_head %}
+    {{ block.super }}
+    <style>
+    .card {
+        position:relative;
+
+    }
+    .card .card-badge {
+        position: absolute;
+        top: -15px;
+        left: -2px;
+        transform: rotate(-20deg);
+        font-size: 24px;
+
+    }
+    </style>
+{% endblock %}
+
 {% block content %}
-    <main role="main" class="inner cover">
-        <h1 class="cover-heading">
-            Django Project with Azure DevOps
-        </h1>
-        <p class="lead">
-            Cover is a one-page template for building simple and beautiful home pages.
-            Download, edit the text, and add your own fullscreen background photo to make it your own.
-        </p>
-        <p class="lead">
-        <a href="https://aka.ms/devops" class="btn btn-lg btn-secondary" target="_blank">
-            배우러 가기
-        </a>
-        </p>
-    </main>
+    <div class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">
+                네이버 영화, 예매순 랭킹
+            </h1>
+        </div>
+
+        <div class="mb-3">
+            <img src="data:image/png;base64,{{ chart_img }}" style="max-width: 100%;" />
+        </div>
+
+        <div class="card-deck mb-3 text-center">
+            <div class="row">
+                {% for idx, movie in movie_df.iterrows %}
+                    <div class="col-sm-3">
+                        <div class="card mb-4 box-shadow mr-0 ml-0">
+                            <img class="card-img-top" src="{{ movie.posterImageUrl }}" alt="Card image cap">
+                            <div class="card-body">
+                                <a href="{{ movie.detailUrl }}" class="btn btn-sm btn-block btn-outline-primary" target="_blank">
+                                    예매율: {{ movie.reserveRatio}}%
+                                </a>
+                            </div>
+                            <div class="card-badge">
+                                <div class="badge badge-primary">{{ forloop.counter }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
 

@@ -2,34 +2,58 @@
 {% load static %}
 
 {% block extra_head %}
-    <link rel="stylesheet" href="{% static "home/cover.css" %}" />
+    <title>Azure DevOps 배포 데모</title>
 {% endblock %}
 
 {% block body %}
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-            <div class="inner">
-                <h3 class="masthead-brand">Azure DevOps</h3>
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Contact</a>
-                </nav>
-            </div>
-        </header>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Azure DevOps 배포 데모</h5>
+        <a class="btn btn-outline-primary" href="https://github.com/allieus/demo-django-deploy-with-azure-devops" target="_blank">GitHub 저장소</a>
+    </div>
 
-        {% block content %}
-        {% endblock %}
+    {% block content %}
+    {% endblock %}
 
-        <footer class="mastfoot mt-auto">
-            <div class="inner">
-                <p>
-                    Cover template for
-                    <a href="https://getbootstrap.com/">Bootstrap</a>,
-                    by <a href="https://twitter.com/mdo">@mdo</a>.
-                </p>
+    <div class="container">
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    Ask Company
+                    <small class="d-block mb-3 text-muted">
+                        &copy; 2016<script>document.write("~" + ((new Date()).getYear() + 1900));</script>
+                    </small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Documents</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="https://docs.microsoft.com/en-us/azure/devops/boards/index?view=azure-devops">Azure Boards</a></li>
+                        <li><a class="text-muted" href="https://docs.microsoft.com/en-us/azure/devops/repos/index?view=azure-devops">Azure Repos</a></li>
+                        <li><a class="text-muted" href="https://docs.microsoft.com/en-us/azure/devops/pipelines/index?view=azure-devops">Azure Pipelines</a></li>
+                        <li><a class="text-muted" href="https://docs.microsoft.com/en-us/azure/devops/test/index-tp?view=azure-devops">Azure Test Plans</a></li>
+                        <li><a class="text-muted" href="https://docs.microsoft.com/en-us/azure/devops/artifacts/index?view=azure-devops">Azure Artifacts</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Software Stacks</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="https://djangoproject.com/">Django</a></li>
+                        <li><a class="text-muted" href="https://www.python.org/">Python</a></li>
+                        <li><a class="text-muted" href="https://pandas.pydata.org/">Pandas</a></li>
+                        <li><a class="text-muted" href="https://matplotlib.org/">matplotlib</a></li>
+                        <li><a class="text-muted" href="https://aws.amazon.com/ko/elasticbeanstalk/">AWS Elasstic Beanstalk</a></li>
+                        <li><a class="text-muted" href="https://aws.amazon.com/ko/lambda/">AWS Lambda</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="https://facebook.com/allieuslee">Chinseok Lee</a></li>
+                        <li><a class="text-muted" href="https://facebook.com/groups/askdjango">Ask Django</a></li>
+                        <li><a class="text-muted" href="https://askcompany.kr">Ask Company</a></li>
+                        <li><a class="text-muted" href="mailto:me@askcompany.kr">me@askcompany.kr</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
-    </div>
 {% endblock %}
 
