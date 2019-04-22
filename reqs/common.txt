@@ -1,6 +1,9 @@
+zappa
+
 django~=2.1.0
 
 pandas
+matplotlib
 requests
 beautifulsoup4
 
