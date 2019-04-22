@@ -1,4 +1,4 @@
-FROM lambci/lambda:build-python3.6
+FROM lambci/lambda:build-python3.7
 
 MAINTAINER "Chinseok Lee" <me@askcompany.kr>
 
