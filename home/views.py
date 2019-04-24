@@ -25,13 +25,11 @@ def debug(request):
         for k, v in os.environ.items():
             for name in hidden_fields:
                 if name in k.upper():
-                    v = '*' * len(v)
+                    v = v[:3] + '*' * (len(v) - 3)
                     break
 
-            for name in skip_fields:
-                if name in k.upper():
-                    v = '*' * len(v)
-                    break
+            if any(name for name in skip_fields if name in k.upper()):
+                continue
 
             yield (k, v)
 
