@@ -6,7 +6,7 @@ ADD . /dj
 
 ENV PYTHONUNBUFFERED  1
 
-RUN python3.7 -m pip install -r reqs/prod_docker.txt
+RUN python3.7 -m pip install -r reqs/prod_aws.txt
 
 EXPOSE 80
 
