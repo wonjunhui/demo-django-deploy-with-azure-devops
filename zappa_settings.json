@@ -3,7 +3,7 @@
         "aws_region": "ap-northeast-2",
         "django_settings": "azure_devops.settings.prod",
         "profile_name": "default",
-        "project_name": "demo-django-dep",
+        "project_name": "demo-azure-devops",
         "runtime": "python3.7",
         "s3_bucket": "zappa-with-azure-devops"
     }
