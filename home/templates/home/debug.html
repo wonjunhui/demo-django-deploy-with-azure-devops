@@ -1,0 +1,21 @@
+<h2>settings</h2>
+
+<ul>
+    <li>INSTALLED_APPS: {{ settings.INSTALLED_APPS }}</li>
+    <li>STATICFILES_STORAGE: {{ settings.STATICFILES_STORAGE }}</li>
+    <li>DEFAULT_FILE_STORAGE: {{ settings.DEFAULT_FILE_STORAGE }}</li>
+</ul>
+
+<h2>Environment Variables</h2>
+
+<table>
+    <tbody>
+        {% for key, value in environment_variables %}
+        <tr>
+            <th>{{ key }}</th>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
